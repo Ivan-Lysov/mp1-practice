@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <math.h>
+
 int main()
 {
 	float r1, r2, x1, y1, x2, y2;
@@ -19,15 +20,23 @@ int main()
 		printf("No matul points");
 		return 0;
 	}
-	if (rasti == summa_between_radius)
+
+	if ((rasti == summa_between_radius) && ((x1 != x2) || (y1 != y2)))
 	{
 		printf("External Tangency of circles");
 		return 0;
 	}
 	if (rasti == difference_between_radius)
 	{
-		printf("Internal Tangency of circles");
-		return 0;
+		if ((r1 == r2) && (x1 == x2) && (y1 == y2))
+		{
+			printf("Circles Coincide");
+			return 0;
+		}
+		else {
+			printf("Internal Tangency of circles");
+			return 0;
+		}
 	}
 	if ((rasti > difference_between_radius) && (summa_between_radius > rasti))
 	{
@@ -37,11 +46,6 @@ int main()
 	if ((rasti > 0) && (difference_between_radius > rasti))
 	{
 		printf("No matual points.One cercle in incribed in another");
-		return 0;
-	}
-	if ((r1 == r2) && (x1 == x2) && (y1 = y2));
-	{
-		printf("Circles Coincide");
 		return 0;
 	}
 }
