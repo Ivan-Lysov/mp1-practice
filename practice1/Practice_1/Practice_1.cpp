@@ -24,7 +24,7 @@ int main()
 	h = h * 0.01;
 	d = d * 0.01;
 	BackWall = h * w * k * 800;
-	SideWall = 2 * h * d * 0.015 * 650;
+	SideWall = 2 * (h-0.03) * d * 0.015 * 650;
 	WallUp = 2 * w * d * 0.015 * 650;
 	doors =  h * w * 0.010 * 550;
 	shelves = a * d * (w - (0.015 * 2)) * 0.015 * 650;
